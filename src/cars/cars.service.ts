@@ -5,7 +5,7 @@ export class CarsService {
     private cars = [
         {
             id:1,
-            brand: 'Toyota',
+            brand: 'Honda',
             model:'Corolla'
         },
         {
@@ -28,5 +28,11 @@ export class CarsService {
         const car = this.cars.find(car => car.id===id);
 
         return car;
+    }
+
+    findOneByBrand(brand:string){
+        const br = this.cars.filter(car => car.brand===brand);
+
+        return br;
     }
 }
